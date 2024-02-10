@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splash_screen">
+
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.example.champ.onBoarding.splash_screen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splash_screen_to_viewPagerFragmnet"
+            app:destination="@id/viewPagerFragmnet"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_screen_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_screen_to_bottomActivity"
+            app:destination="@id/bottomActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragmnet"
+        android:name="com.example.champ.onBoarding.ViewPagerFragmnet"
+        android:label="fragment_view_pager_fragmnet"
+        tools:layout="@layout/fragment_view_pager_fragmnet" >
+        <action
+            android:id="@+id/action_viewPagerFragmnet_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/viewPagerFragmnet"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginIn"
+        android:name="com.example.champ.login.LoginIn"
+        android:label="fragment_login_in"
+        tools:layout="@layout/fragment_login_in" >
+        <action
+            android:id="@+id/action_loginIn_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginIn_to_forgotpassword"
+            app:destination="@id/forgotpassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.champ.login.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginIn"
+            app:destination="@id/loginIn" />
+        <action
+            android:id="@+id/action_homeFragment_to_bottomActivity"
+            app:destination="@id/bottomActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotpassword"
+        android:name="com.example.champ.login.Forgotpassword"
+        android:label="fragment_forgotpassword"
+        tools:layout="@layout/fragment_forgotpassword" >
+        <action
+            android:id="@+id/action_forgotpassword_to_loginIn"
+            app:destination="@id/loginIn" />
+        <action
+            android:id="@+id/action_forgotpassword_to_OTPverif"
+            app:destination="@id/OTPverif" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPassword"
+        android:name="com.example.champ.login.NewPassword"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" >
+        <action
+            android:id="@+id/action_newPassword_to_loginIn"
+            app:destination="@id/loginIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPverif"
+        android:name="com.example.champ.login.OTPverif"
+        android:label="fragment_o_t_pverif"
+        tools:layout="@layout/fragment_o_t_pverif" >
+        <action
+            android:id="@+id/action_OTPverif_to_newPassword"
+            app:destination="@id/newPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/main_screen"
+        android:name="com.example.champ.mainPages.main_screen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_main_screen_to_wallet"
+            app:destination="@id/wallet" />
+    </fragment>
+    <fragment
+        android:id="@+id/wallet"
+        android:name="com.example.champ.mainPages.Wallet"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_wallet_to_main_screen"
+            app:destination="@id/main_screen" />
+    </fragment>
+    <activity
+        android:id="@+id/bottomActivity"
+        android:name="com.example.champ.BottomActivity"
+        android:label="activity_bottom"
+        tools:layout="@layout/activity_bottom" />
+</navigation>

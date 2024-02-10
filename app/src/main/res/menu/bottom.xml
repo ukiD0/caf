@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/main_screen2"
+        android:enabled="true"
+        android:icon="@drawable/home_gray"
+        android:title="Home" />
+    <item android:id="@+id/wallet2"
+        android:enabled="true"
+        android:icon="@drawable/wallet_gray"
+        android:title="Wallet" />
+    <item android:id="@+id/track"
+        android:enabled="true"
+        android:icon="@drawable/track_gray"
+        android:title="Track" />
+    <item android:id="@+id/profile"
+        android:enabled="true"
+        android:icon="@drawable/profile_gray"
+        android:title="Profile"
+       />
+</menu>
