@@ -104,6 +104,10 @@ class HomeFragment : Fragment() {
                 is SessionStatus.Authenticated -> {
                     Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_bottomActivity)
                     activity!!.finish()
+                    val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.putBoolean("isLogin",true)
+                    editor.apply()
                 }
                 SessionStatus.LoadingFromStorage -> {
                 }
