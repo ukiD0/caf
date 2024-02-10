@@ -6,6 +6,8 @@ import com.example.champ.models.User
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.Auth
+import io.github.jan.supabase.gotrue.auth
+import io.github.jan.supabase.gotrue.providers.builtin.Email
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.from
 
@@ -28,6 +30,12 @@ class connect_db() {
             install(Auth)
         }
         return client
+    }
+    suspend fun register(out_email: String, out_password: String){
+        getClient().auth.signUpWith(Email){
+            email = out_email
+            password = out_password
+        }
     }
 
     suspend fun getUserByI(userId:Int): User{

@@ -50,7 +50,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/fullName"
                 android:layout_width="342dp"
                 android:layout_height="44dp"
                 android:layout_marginLeft="24dp"
@@ -78,7 +78,7 @@
                 android:textColorHint="@color/text_gray_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
             <EditText
                 android:id="@+id/editText2"
@@ -212,7 +212,7 @@
         app:layout_constraintTop_toTopOf="@+id/inp_passw2" />
 
     <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkPrivacy"
         android:layout_width="14dp"
         android:layout_height="14dp"
         android:layout_marginLeft="24dp"
