@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.champ.R
+import com.example.champ.databinding.FragmentWalletBinding
 
 
 class Wallet : Fragment() {
@@ -17,9 +19,13 @@ class Wallet : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wallet, container, false)
+        val binding = FragmentWalletBinding.inflate(inflater)
+
+        val tvheader: TextView = activity!!.findViewById(R.id.tvheader)
+        tvheader.text = "Wallet"
+
+
+        return binding.root
     }
 
 

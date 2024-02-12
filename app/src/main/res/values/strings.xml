@@ -6,8 +6,10 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="politic">By ticking this box, you agree to our <a href="E:\Champ\app\src\main\assets\hui.pdf">Terms and conditions and private policy</a></string>
     <string name="hav_account">Already have an account?<a href="a">Sign in</a></string>
+    <string name="signIn"><a href="a">Sign in</a></string>
     <string name="hav_accountUp">Already have an account?<a href="a">Sign up</a></string>
     <string name="Forgot_password"><a href="a">Forgot Password?</a></string>
     <string name="remember">Remember password? Back to<a href="a">Sign in</a></string>
     <string name="timer">timer</string>
+    <string name="AddPayment">Add Payment method</string>
 </resources>

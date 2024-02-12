@@ -19,7 +19,6 @@ class OTPverif : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val binding = FragmentOTPverifBinding.inflate(inflater)
 
         binding.sendOTP.setOnClickListener {

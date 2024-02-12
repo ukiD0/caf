@@ -1,23 +1,21 @@
 package com.example.champ.mainPages
 
+import android.app.ActionBar.LayoutParams
+import android.app.Activity
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.OrientationEventListener
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
-import android.widget.Toast
+import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
+import androidx.fragment.app.Fragment
 import com.example.champ.R
 import com.example.champ.database.connect_db
 import com.example.champ.databinding.FragmentMainScreenBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import io.github.jan.supabase.gotrue.auth
 
 
@@ -29,7 +27,7 @@ class main_screen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainScreenBinding.inflate(inflater)
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+
         val db = connect_db()
         val orientationEventListener = object : OrientationEventListener(requireContext()) {
             override fun onOrientationChanged(orientation: Int) {
@@ -46,9 +44,12 @@ class main_screen : Fragment() {
             }
         }
         orientationEventListener.enable()
-
-
         db.getClient().auth.sessionStatus.value.toString()
+
+        val tvheader: TextView = activity!!.findViewById(R.id.tvheader)
+        tvheader.text = "Home"
+
+
         return binding.root
     }
 

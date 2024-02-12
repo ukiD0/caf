@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+
         binding = FragmentHomeBinding.inflate(inflater)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)

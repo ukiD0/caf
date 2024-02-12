@@ -18,7 +18,6 @@ class LoginIn : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val binding = FragmentLoginInBinding.inflate(inflater)
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
         binding.tvSignIn.setOnClickListener {

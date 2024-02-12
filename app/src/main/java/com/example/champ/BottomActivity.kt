@@ -2,7 +2,12 @@ package com.example.champ
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,20 +18,24 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBottomBinding
-
-
+    public lateinit var btBack: ImageButton
+    public  lateinit var tvheader: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBottomBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        btBack = binding.btBack
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView1)
         val navHost = supportFragmentManager.findFragmentById(R.id.bottomFragmentView) as NavHostFragment
         binding.bottomNavigationView1.setupWithNavController(navHost.navController)
 
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.main_screen,R.id.wallet2,R.id.track,R.id.profile))
-        setupActionBarWithNavController(navHost.navController,appBarConfiguration)
+//        val appBarConfiguration = AppBarConfiguration(setOf(R.id.main_screen,R.id.wallet2,R.id.track,R.id.profile))
+//        setupActionBarWithNavController(navHost.navController,appBarConfiguration)
 
+        //хуйня собачья
+        btBack.setOnClickListener {
+            navHost.navController.popBackStack()
+        }
 
 
 

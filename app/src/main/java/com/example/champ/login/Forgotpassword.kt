@@ -16,7 +16,6 @@ class Forgotpassword : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val binding = FragmentForgotpasswordBinding.inflate(inflater)
 
         binding.tvSignIn.setOnClickListener{

@@ -18,11 +18,16 @@ class FirdFargment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+
         val binding = FragmentFirdFargmentBinding.inflate(inflater)
 
         binding.finish.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragmnet_to_homeFragment)
+            onBoardingFinished()
+        }
+
+        binding.tvSignIn.setOnClickListener {
+            findNavController().navigate(R.id.action_viewPagerFragmnet_to_loginIn)
             onBoardingFinished()
         }
 

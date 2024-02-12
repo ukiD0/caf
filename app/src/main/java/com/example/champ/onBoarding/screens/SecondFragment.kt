@@ -18,7 +18,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+
         val binding = FragmentSecondBinding.inflate(inflater)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)

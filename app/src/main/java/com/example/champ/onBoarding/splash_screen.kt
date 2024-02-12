@@ -22,7 +22,6 @@ class splash_screen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         Handler(Looper.getMainLooper()).postDelayed({
             if(onBoardindFinished()){
                 if(onLoginFinished()){

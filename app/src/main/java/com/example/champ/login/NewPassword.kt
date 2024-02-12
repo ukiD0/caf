@@ -17,7 +17,6 @@ class NewPassword : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val binding = FragmentNewPasswordBinding.inflate(inflater)
 
         binding.btLoginIn.setOnClickListener {

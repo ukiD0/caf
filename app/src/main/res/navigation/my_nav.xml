@@ -34,6 +34,9 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/viewPagerFragmnet"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewPagerFragmnet_to_loginIn"
+            app:destination="@id/loginIn" />
     </fragment>
     <fragment
         android:id="@+id/loginIn"

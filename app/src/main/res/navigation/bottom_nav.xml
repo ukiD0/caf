@@ -24,6 +24,19 @@
         android:id="@+id/profile"
         android:name="com.example.champ.mainPages.Profile"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_notification_fragment"
+            app:destination="@id/notification_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notification_fragment"
+        android:name="com.example.champ.mainPages.notification.notification_fragment"
+        android:label="fragment_notification_fragment"
+        tools:layout="@layout/fragment_notification_fragment" >
+        <action
+            android:id="@+id/action_notification_fragment_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
 
 </navigation>

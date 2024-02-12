@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainPages.Profile">
+    tools:context=".mainPages.Profile"
+    style="@style/ScreenBackground">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -44,10 +45,11 @@
             android:paddingLeft="5dp">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/ProfileText"
+                style="@style/TextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello Ken" />
+                android:text="Hello Ken"
+                />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
@@ -92,6 +94,8 @@
         android:layout_height="26dp"
         android:layout_marginLeft="170dp"
         android:layout_marginRight="25dp"
+        android:checked="false"
+        android:theme="@style/Switch"
         app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
@@ -383,7 +387,8 @@
             android:layout_width="342dp"
             android:layout_height="62dp"
             android:paddingLeft="12dp"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="12dp"
+            android:id="@+id/block_notific">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="19dp"
