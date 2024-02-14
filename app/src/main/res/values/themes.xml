@@ -20,6 +20,9 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="TranspererntStatusBar" parent="">
+        <item name="android:windowFullscreen">true</item>
+    </style>
 
     <style name="ThemeOverlay.Champ.FullscreenContainer" parent="">
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
@@ -31,5 +34,8 @@
     </style>
     <style name="TextColor">
         <item name="android:textColor">@color/text_gray_color</item>
+    </style>
+    <style name="CustomProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progressbar</item>
     </style>
 </resources>

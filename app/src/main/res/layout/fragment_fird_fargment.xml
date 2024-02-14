@@ -54,6 +54,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bt_next_blue"
         android:text="Sign Up"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -66,11 +68,10 @@
         android:layout_marginRight="90dp"
         android:text="Already have an account?"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finish"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintTop_toBottomOf="@+id/finish"/>
 
     <TextView
         android:id="@+id/tvSignIn"

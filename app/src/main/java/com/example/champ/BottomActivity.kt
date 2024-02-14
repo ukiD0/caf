@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -32,6 +33,8 @@ class BottomActivity : AppCompatActivity() {
 //        val appBarConfiguration = AppBarConfiguration(setOf(R.id.main_screen,R.id.wallet2,R.id.track,R.id.profile))
 //        setupActionBarWithNavController(navHost.navController,appBarConfiguration)
 
+        binding.btBack.isVisible = false
+        binding.cardView.isVisible = true
         //хуйня собачья
         btBack.setOnClickListener {
             navHost.navController.popBackStack()

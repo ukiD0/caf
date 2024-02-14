@@ -11,8 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
+import com.example.champ.BottomActivity
 import com.example.champ.R
 import com.example.champ.databinding.FragmentProfileBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class Profile : Fragment() {
@@ -23,11 +25,11 @@ class Profile : Fragment() {
     ): View? {
         val binding = FragmentProfileBinding.inflate(inflater)
 
+        val footer: BottomNavigationView = activity!!.findViewById(R.id.bottomNavigationView1)
+        footer.isVisible = true
+
         val tvheader: TextView = activity!!.findViewById(R.id.tvheader)
         tvheader.text = "Profile"
-
-        val btBack: ImageButton = activity!!.findViewById(R.id.bt_back)
-        btBack.isVisible = false
 
         binding.switch1.setOnClickListener {
             if (binding.switch1.isChecked) {
@@ -41,7 +43,13 @@ class Profile : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.action_profile_to_notification_fragment)
         }
 
+        binding.linearLayoutCompat6.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_profile_to_add_payment_fragment)
+        }
 
+        binding.LLsendpackeg.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_profile_to_send_packeg_fragment)
+        }
 
 
 

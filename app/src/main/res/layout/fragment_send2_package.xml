@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainPages.notification.send2_package">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView7"
+     style="@style/blue_H1Address"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="24dp"
+     android:layout_marginTop="24dp"
+     android:text="Package Information"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/sdsdsdds"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="8dp"
+     android:layout_marginLeft="24dp"
+     android:text="Origin details"
+     android:textColor="@color/asBlack"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView10" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView11"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="24dp"
+     android:layout_marginTop="8dp"
+     android:hint="+234 56543 96854"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/sddsdssds" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView9"
+     style="@style/Hint"
+     android:layout_marginLeft="24dp"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="8dp"
+     android:hint="Mbaraugba, Ovom Amaa Asaa, Abia state"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView8"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="24dp"
+     android:layout_marginTop="8dp"
+     android:text="Origin details"
+     android:textColor="@color/asBlack"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView10"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="24dp"
+     android:layout_marginTop="8dp"
+     android:hint="+234 56543 96854"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/sddsdssds"
+     style="@style/Hint"
+     android:layout_marginTop="8dp"
+     android:layout_marginLeft="24dp"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:hint="19 Ademola Alabi close, lagos "
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/sdsdsdds" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/rrrr"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Origin details"
+     android:textColor="@color/asBlack"
+     app:layout_constraintStart_toStartOf="parent"
+     android:layout_marginTop="8dp"
+     android:layout_marginLeft="24dp"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView11" />
+
+
+ <LinearLayout
+     android:id="@+id/tesse"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="8dp"
+     android:layout_marginEnd="24dp"
+     android:orientation="vertical"
+     android:paddingTop="8sp"
+     android:paddingRight="24sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/rrrr">
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/packeg1"
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="10dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="10dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="10dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange"/>
+
+ </LinearLayout>
+
+ <androidx.appcompat.widget.AppCompatImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/line"
+     app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+ <LinearLayout
+     android:id="@+id/linearLayout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="16dp"
+     android:orientation="vertical"
+     android:paddingTop="8sp"
+     android:paddingRight="24sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/tesse">
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="55dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="10dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/orangeSEND"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:layout_marginTop="10dp"
+      android:hint="Пустое значение"
+      android:textColorHint="@color/orange" />
+
+ </LinearLayout>
+
+ <LinearLayout
+     android:paddingTop="20sp"
+     android:paddingLeft="24sp"
+     android:id="@+id/linearLayout2"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="end"
+     android:orientation="vertical"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/rrrr">
+
+  <androidx.appcompat.widget.AppCompatTextView
+
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="Package Items" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:layout_marginTop="8dp"
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="Weight of items" />
+  <androidx.appcompat.widget.AppCompatTextView
+      android:layout_marginTop="8dp"
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="Worth of Items" />
+  <androidx.appcompat.widget.AppCompatTextView
+      android:layout_marginTop="8dp"
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="Tracking Number" />
+
+ </LinearLayout>
+
+
+ <LinearLayout
+     android:id="@+id/linearLayout3"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="end"
+     android:orientation="vertical"
+     android:paddingLeft="24sp"
+     android:layout_marginTop="40dp"
+     android:paddingTop="8sp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/blue_H1Address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Charges"
+      android:textColor="@color/primary_blue" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="Delivery Charges" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="Instant delivery" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      style="@style/Hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="Tax and Service Charges" />
+
+ </LinearLayout>
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView12"
+     style="@style/Hint"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="24dp"
+     android:layout_marginTop="20dp"
+     android:hint="Package total"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/appCompatTextView13"
+     style="@style/orangeSEND"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="35dp"
+     android:hint="Total price"
+     android:layout_marginRight="45dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+ <androidx.appcompat.widget.AppCompatImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/line"
+     app:layout_constraintBottom_toTopOf="@+id/appCompatTextView12"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/editPACKAGE"
+     style="@style/blueBTN"
+     android:layout_width="158dp"
+     android:layout_height="48dp"
+     android:background="@drawable/blue_edit"
+     android:text="Edit package"
+     android:textAllCaps="false"
+     android:layout_marginLeft="25dp"
+     android:layout_marginTop="65dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/makepayment"
+     style="@style/whiteBTN"
+     android:layout_marginRight="25dp"
+     android:layout_width="158dp"
+     android:layout_height="48dp"
+     android:layout_marginTop="65dp"
+     android:background="@drawable/blue_edit2"
+     android:textAllCaps="false"
+     android:text="Make payment"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView13" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

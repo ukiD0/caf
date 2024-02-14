@@ -1,0 +1,33 @@
+@startuml
+class com.example.champ.onBoarding.splash_screen {
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- Boolean onBoardindFinished()
+- Boolean onLoginFinished()
+}
+class com.example.champ.onBoarding.ViewPagerFragmnet {
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+class com.example.champ.onBoarding.screens.SecondFragment {
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+class com.example.champ.onBoarding.ViewPagerAdapter {
+-  fragmentList
++ Int getItemCount()
++ Fragment createFragment(Int)
+}
+class com.example.champ.onBoarding.screens.FirstFragment {
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+class com.example.champ.onBoarding.screens.FirdFargment {
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- void onBoardingFinished()
+}
+
+
+androidx.fragment.app.Fragment <|-- com.example.champ.onBoarding.splash_screen
+androidx.fragment.app.Fragment <|-- com.example.champ.onBoarding.ViewPagerFragmnet
+androidx.fragment.app.Fragment <|-- com.example.champ.onBoarding.screens.SecondFragment
+androidx.viewpager2.adapter.FragmentStateAdapter <|-- com.example.champ.onBoarding.ViewPagerAdapter
+androidx.fragment.app.Fragment <|-- com.example.champ.onBoarding.screens.FirstFragment
+androidx.fragment.app.Fragment <|-- com.example.champ.onBoarding.screens.FirdFargment
+@enduml

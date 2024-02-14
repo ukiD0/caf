@@ -19,7 +19,11 @@
         android:id="@+id/track"
         android:name="com.example.champ.mainPages.Track"
         android:label="Track"
-        tools:layout="@layout/fragment_track" />
+        tools:layout="@layout/fragment_track" >
+        <action
+            android:id="@+id/action_track_to_view_package"
+            app:destination="@id/view_package" />
+    </fragment>
     <fragment
         android:id="@+id/profile"
         android:name="com.example.champ.mainPages.Profile"
@@ -28,6 +32,12 @@
         <action
             android:id="@+id/action_profile_to_notification_fragment"
             app:destination="@id/notification_fragment" />
+        <action
+            android:id="@+id/action_profile_to_add_payment_fragment"
+            app:destination="@id/add_payment_fragment" />
+        <action
+            android:id="@+id/action_profile_to_send_packeg_fragment"
+            app:destination="@id/send_packeg_fragment" />
     </fragment>
     <fragment
         android:id="@+id/notification_fragment"
@@ -38,5 +48,53 @@
             android:id="@+id/action_notification_fragment_to_profile"
             app:destination="@id/profile" />
     </fragment>
+    <fragment
+        android:id="@+id/add_payment_fragment"
+        android:name="com.example.champ.mainPages.notification.add_payment_fragment"
+        android:label="fragment_add_payment_fragment"
+        tools:layout="@layout/fragment_add_payment_fragment" />
+    <fragment
+        android:id="@+id/send_packeg_fragment"
+        android:name="com.example.champ.mainPages.notification.send_packeg_fragment"
+        android:label="fragment_send_packeg_fragment"
+        tools:layout="@layout/fragment_send_packeg_fragment" >
+        <action
+            android:id="@+id/action_send_packeg_fragment_to_send2_package"
+            app:destination="@id/send2_package" />
+    </fragment>
+    <fragment
+        android:id="@+id/send2_package"
+        android:name="com.example.champ.mainPages.notification.send2_package"
+        android:label="fragment_send2_package"
+        tools:layout="@layout/fragment_send2_package" >
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_send2_package_to_transition"
+            app:destination="@id/transition" />
+        <argument
+            android:name="test"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_send2_package_to_send_packeg_fragment"
+            app:destination="@id/send_packeg_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transition"
+        android:name="com.example.champ.mainPages.notification.transition"
+        android:label="fragment_transition"
+        tools:layout="@layout/fragment_transition" >
+        <action
+            android:id="@+id/action_transition_to_main_screen2"
+            app:destination="@id/main_screen2" />
+        <action
+            android:id="@+id/action_transition_to_track"
+            app:destination="@id/track" />
+    </fragment>
+    <fragment
+        android:id="@+id/view_package"
+        android:name="com.example.champ.mainPages.notification.view_package"
+        android:label="view_package" />
 
 </navigation>

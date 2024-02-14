@@ -12,10 +12,12 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.champ.R
 import com.example.champ.database.connect_db
 import com.example.champ.databinding.FragmentMainScreenBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import io.github.jan.supabase.gotrue.auth
 
 
@@ -27,12 +29,13 @@ class main_screen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainScreenBinding.inflate(inflater)
-
+        val footer: BottomNavigationView = activity!!.findViewById(R.id.bottomNavigationView1)
+        footer.isVisible = true
         val db = connect_db()
         val orientationEventListener = object : OrientationEventListener(requireContext()) {
             override fun onOrientationChanged(orientation: Int) {
                 when (orientation) {
-                    in 50..50 -> {
+                     50 -> {
                         addStars()
                         //Toast.makeText(requireContext(), orientation.toString(), Toast.LENGTH_LONG).show()
                     }

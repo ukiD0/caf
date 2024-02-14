@@ -1,0 +1,11 @@
+@startuml
+class com.example.champ.database.connect_db {
++ SupabaseClient getClient()
++ void register(String,String)
++ User getUserByI(Int)
++ List<User> getUser()
++ User addUser(User)
++ User deleteUser(Int)
++ User updateUser(User)
+}
+@enduml
