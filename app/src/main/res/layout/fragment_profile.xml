@@ -238,7 +238,7 @@
                 android:layout_height="19dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="25dp"
-                android:src="@drawable/map" />
+                android:src="@drawable/map222" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
