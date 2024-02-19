@@ -10,20 +10,22 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:elevation="10dp">
+        android:elevation="10dp"
+        android:stateListAnimator="@drawable/test">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/bt_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/arrow"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="16dp" />
+             />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvheader"

@@ -68,6 +68,12 @@
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
+    <style name="smallMainBtnText" parent="">
+        <item name="android:textSize">7.5dp</item>
+        <item name="android:textColor">@color/asBlack</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
     <style name="blueBTN" parent="">
         <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/primary_blue</item>

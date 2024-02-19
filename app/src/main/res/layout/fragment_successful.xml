@@ -54,12 +54,12 @@
         style="@style/MainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="69dp"
         android:text="Rate Rider"
+        android:layout_marginTop="435dp"
         android:textColor="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutStar"
@@ -117,16 +117,24 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/fam" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/Hint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:maxLength="10"
             android:layout_marginLeft="30dp"
-            android:hint="Add feedback" />
+            android:layout_gravity="center|left"
+            android:hint="Add feedback"
+            android:textColor="@color/asBlack"
+            android:textSize="14dp"
+            android:textFontWeight="400"
+            android:fontFamily="@font/roboto"
+            />
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/done"
         android:layout_width="342dp"
         android:layout_height="46dp"
         android:background="@drawable/bt_next_blue"

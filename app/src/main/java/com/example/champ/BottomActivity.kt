@@ -30,9 +30,6 @@ class BottomActivity : AppCompatActivity() {
         val navHost = supportFragmentManager.findFragmentById(R.id.bottomFragmentView) as NavHostFragment
         binding.bottomNavigationView1.setupWithNavController(navHost.navController)
 
-//        val appBarConfiguration = AppBarConfiguration(setOf(R.id.main_screen,R.id.wallet2,R.id.track,R.id.profile))
-//        setupActionBarWithNavController(navHost.navController,appBarConfiguration)
-
         binding.btBack.isVisible = false
         binding.cardView.isVisible = true
         //хуйня собачья

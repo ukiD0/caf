@@ -4,7 +4,6 @@
 
 
         <item name="android:windowLightStatusBar">true</item>
-
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
 
@@ -21,7 +20,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="TranspererntStatusBar" parent="">
-        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <style name="ThemeOverlay.Champ.FullscreenContainer" parent="">

@@ -104,8 +104,8 @@
             android:id="@+id/tesse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
             android:orientation="vertical"
             android:paddingTop="8sp"
             android:paddingRight="24sp"
@@ -128,7 +128,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:hint="Пустое значение"
-                android:textColorHint="@color/orange"/>
+                android:textColorHint="@color/orange" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/orangeSEND"
@@ -137,7 +137,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:hint="Пустое значение"
-                android:textColorHint="@color/orange"/>
+                android:textColorHint="@color/orange" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/orangeSEND"
@@ -146,7 +146,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:hint="Пустое значение"
-                android:textColorHint="@color/orange"/>
+                android:textColorHint="@color/orange" />
 
         </LinearLayout>
 
@@ -339,7 +339,7 @@
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/makepayment"
+            android:id="@+id/successful"
             style="@style/whiteBTN"
             android:textAllCaps="false"
             android:layout_marginRight="25dp"

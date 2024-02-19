@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainPages.notification.ChatJames">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="65sp"
+            android:elevation="10dp"
+            android:stateListAnimator="@drawable/test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bt_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/arrow"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/profilr" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/phoneee" />
+        </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView24"
+                style="@style/MainText"
+                android:layout_width="220dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/chat_bl"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="Hello, Please check your phone, I just booked you to deliver my stuff"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView25"
+                style="@style/MainText"
+                android:layout_width="174dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/chat_gr"
+                android:paddingStart="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="Thank you for contacting me."
+                android:textAlignment="viewStart"
+                android:textColor="@color/asBlack"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView24"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView26"
+                style="@style/MainText"
+                android:layout_width="174dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/chat_gr"
+                android:paddingStart="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="Thank you for contacting me."
+                android:textAlignment="viewStart"
+                android:textColor="@color/asBlack"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView25"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView27"
+                style="@style/MainText"
+                android:layout_width="145dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/chat_bl"
+                android:paddingStart="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="Alright, I wll be waiting"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView26"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/emoji"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText3"
+                app:layout_constraintEnd_toStartOf="@+id/textInputEditText3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textInputEditText3" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText3"
+                style="@style/Hint"
+                android:layout_width="267dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="400dp"
+                android:background="@drawable/search_input"
+                android:drawableEnd="@drawable/micro"
+                android:hint="Enter message"
+                android:textColorHint="@color/text_gray_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView27"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/triangle"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText3"
+                app:layout_constraintStart_toEndOf="@+id/textInputEditText3"
+                app:layout_constraintTop_toTopOf="@+id/textInputEditText3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

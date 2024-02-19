@@ -14,7 +14,11 @@
         android:id="@+id/main_screen2"
         android:name="com.example.champ.mainPages.main_screen"
         android:label="Home"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_main_screen2_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
     <fragment
         android:id="@+id/track"
         android:name="com.example.champ.mainPages.Track"
@@ -95,6 +99,52 @@
     <fragment
         android:id="@+id/view_package"
         android:name="com.example.champ.mainPages.notification.view_package"
-        android:label="view_package" />
+        android:label="view_package" >
+        <action
+            android:id="@+id/action_view_package_to_successful"
+            app:destination="@id/successful" />
+    </fragment>
+    <fragment
+        android:id="@+id/successful"
+        android:name="com.example.champ.mainPages.notification.Successful"
+        android:label="fragment_successful"
+        tools:layout="@layout/fragment_successful" >
+        <action
+            android:id="@+id/action_successful_to_main_screen2"
+            app:destination="@id/main_screen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.example.champ.mainPages.notification.Chat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chat_to_chatJames"
+            app:destination="@id/chatJames" />
+        <action
+            android:id="@+id/action_chat_to_main_screen2"
+            app:destination="@id/main_screen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatJames"
+        android:name="com.example.champ.mainPages.notification.ChatJames"
+        android:label="fragment_chat_james"
+        tools:layout="@layout/fragment_chat_james" >
+        <action
+            android:id="@+id/action_chatJames_to_call"
+            app:destination="@id/call" />
+        <action
+            android:id="@+id/action_chatJames_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/call"
+        android:name="com.example.champ.mainPages.notification.Call"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" >
+        <action
+            android:id="@+id/action_call_to_chatJames"
+            app:destination="@id/chatJames" />
+    </fragment>
 
 </navigation>

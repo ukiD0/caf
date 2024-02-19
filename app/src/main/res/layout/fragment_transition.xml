@@ -55,7 +55,7 @@
         style="@style/transition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="85dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="10dp"
         android:text="Tracking Number"
         app:layout_constraintStart_toStartOf="parent"
