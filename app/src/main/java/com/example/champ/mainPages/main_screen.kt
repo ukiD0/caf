@@ -1,35 +1,26 @@
 package com.example.champ.mainPages
 
-import android.app.ActionBar.LayoutParams
-import android.app.Activity
-import android.content.Context
-import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.ActionBar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.champ.R
-import com.example.champ.database.connect_db
 import com.example.champ.databinding.FragmentMainScreenBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import io.github.jan.supabase.gotrue.auth
+import java.io.File
 
 
 class main_screen : Fragment() {
     lateinit var binding: FragmentMainScreenBinding
     //change image from gallery
     val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){
-        val galleryUI = it
-        binding.photo.setImageURI(galleryUI)
+        binding.photo.setImageURI(it)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +32,7 @@ class main_screen : Fragment() {
         binding.photo.setOnClickListener {
             galleryLauncher.launch("image/*")
         }
+
 
         val footer: BottomNavigationView = activity!!.findViewById(R.id.bottomNavigationView1)
         footer.isVisible = true

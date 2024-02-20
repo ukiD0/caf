@@ -70,7 +70,7 @@ class HomeFragment : Fragment() {
                     val last_name = binding.fullName.text.split(" ")[1]
                     lifecycleScope.launch {
                         try {
-                            db.getClient().auth.signUpWith(Email){
+                            db.getClient().auth.signInWith(Email){
                                 email = binding.editText3.text.toString()
                                 password = binding.inpPassw.text.toString()
                                 data = buildJsonObject {
@@ -85,7 +85,6 @@ class HomeFragment : Fragment() {
                         }catch (e:Exception){
                             MyHelper.alert(requireContext(), "Erorr", e.message.toString())
                         }
-
                     }
                 }else{
                     MyHelper.alert(requireContext(), "Empty value", "Не все поля заполены верно")
