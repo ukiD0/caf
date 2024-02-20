@@ -3,7 +3,7 @@ package tests
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-internal class CountTest {
+class CountTest {
     @Test
     fun test() {
         val callback: FakeCallBack = FakeCallBack.Base()

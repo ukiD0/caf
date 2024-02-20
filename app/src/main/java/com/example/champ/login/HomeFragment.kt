@@ -79,6 +79,8 @@ class HomeFragment : Fragment() {
                                     put("phone", binding.editText2.text.toString())
                                 }
                             }
+
+                            //Log.e("test", session?.email.toString())
                             checkStatus()
                         }catch (e:Exception){
                             MyHelper.alert(requireContext(), "Erorr", e.message.toString())
@@ -106,7 +108,11 @@ class HomeFragment : Fragment() {
                     activity!!.finish()
                     val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
                     val editor = sharedPref.edit()
-                    editor.putBoolean("isLogin",true)
+                    editor.putBoolean("isLogin", true)
+                    editor.putString("email", binding.editText3.text.toString())
+                    editor.putString("password", binding.inpPassw.text.toString())
+                    editor.putString("token", it.session.accessToken)
+                    editor.putString("user_name", it.session.user.toString())
                     editor.apply()
                 }
                 SessionStatus.LoadingFromStorage -> {
