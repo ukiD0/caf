@@ -32,7 +32,7 @@ class BottomActivity : AppCompatActivity() {
 
         binding.btBack.isVisible = false
         binding.cardView.isVisible = true
-        //хуйня собачья
+
         btBack.setOnClickListener {
             navHost.navController.popBackStack()
         }
