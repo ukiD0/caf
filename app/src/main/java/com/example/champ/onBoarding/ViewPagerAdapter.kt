@@ -1,24 +1,32 @@
 package com.example.champ.onBoarding
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.champ.onBoarding.screens.FirdFargment
+import com.example.champ.onBoarding.screens.FirstFragment
+import com.example.champ.onBoarding.screens.SecondFragment
 import java.util.Queue
 
 class ViewPagerAdapter(
-    list: Queue<Fragment>,
-    fm: FragmentManager,
-    lifecycle: Lifecycle): FragmentStateAdapter(fm,lifecycle) {
+    private val list: Queue<Fragment>,
+    private val requireActivity: FragmentActivity,
+    lifecycle: Lifecycle): FragmentStateAdapter(requireActivity.supportFragmentManager,lifecycle) {
 
-    private val fragmentList = list
+    private val queue = ArrayList<Fragment>().apply {
+        add(FirstFragment())
+        add(SecondFragment())
+        add(FirdFargment())
+    }
 
     override fun getItemCount(): Int {
-        return fragmentList.size
+        return queue.size
     }
 
     override fun createFragment(position: Int): Fragment {
-        return  fragmentList[position]
+
+        return queue[position]
     }
 
 
