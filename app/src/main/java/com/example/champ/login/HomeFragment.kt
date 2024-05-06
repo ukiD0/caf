@@ -31,18 +31,16 @@ import kotlinx.serialization.json.put
 
 
 class HomeFragment : Fragment() {
-    val db = connect_db()
+    private lateinit var db: connect_db
     lateinit var binding:FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentHomeBinding.inflate(inflater)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
-
-        binding.security.movementMethod = LinkMovementMethod.getInstance()
+        //binding.security.movementMethod = LinkMovementMethod.getInstance()
 
         binding.tvSignIn.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_loginIn)
@@ -70,6 +68,7 @@ class HomeFragment : Fragment() {
                     val last_name = binding.fullName.text.split(" ")[1]
                     lifecycleScope.launch {
                         try {
+                            db = connect_db()
                             db.getClient().auth.signInWith(Email){
                                 email = binding.editText3.text.toString()
                                 password = binding.inpPassw.text.toString()
@@ -79,6 +78,7 @@ class HomeFragment : Fragment() {
                                     put("phone", binding.editText2.text.toString())
                                 }
                             }
+
 
                             //Log.e("test", session?.email.toString())
                             checkStatus()

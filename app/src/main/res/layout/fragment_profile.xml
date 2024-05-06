@@ -61,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:text="Current balance:" />
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="money"

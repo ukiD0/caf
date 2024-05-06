@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.result.registerForActivityResult
 import androidx.cardview.widget.CardView
 import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
@@ -19,9 +20,10 @@ import java.io.File
 class main_screen : Fragment() {
     lateinit var binding: FragmentMainScreenBinding
     //change image from gallery
-    val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){
-        binding.photo.setImageURI(it)
-    }
+//    val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){
+//        binding.photo.setImageURI(it)
+//    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,10 +31,9 @@ class main_screen : Fragment() {
         binding = FragmentMainScreenBinding.inflate(inflater)
 
         //click to changeg image from gallery
-        binding.photo.setOnClickListener {
-            galleryLauncher.launch("image/*")
-        }
-
+//        binding.photo.setOnClickListener {
+//            galleryLauncher.launch("image/*")
+//        }
 
         val footer: BottomNavigationView = activity!!.findViewById(R.id.bottomNavigationView1)
         footer.isVisible = true

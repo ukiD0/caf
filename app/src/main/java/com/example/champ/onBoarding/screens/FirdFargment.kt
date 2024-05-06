@@ -40,4 +40,5 @@ class FirdFargment : Fragment() {
         editor.putBoolean("Finished",true)
         editor.apply()
     }
+
 }

@@ -41,16 +41,18 @@ class Successful : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.action_successful_to_main_screen2)
         }
 
-        val orientationEventListener = object: OrientationEventListener(requireContext()){
-            override fun onOrientationChanged(orientation: Int) {
-                when(orientation){
-                    50 ->
+        val orientationEventListener = object : OrientationEventListener(requireContext()){
+            override fun onOrientationChanged(degrees: Int) {
+                when(degrees){
+                    50 ->{
                         addStars()
-                    in 310..310 -> {
+                    }
+                    in 310..310 ->{
                         removeStars()
                     }
                 }
             }
+
         }
 
         lifecycleScope.launch {
@@ -69,12 +71,13 @@ class Successful : Fragment() {
 
         }
 
+
         return binding.root
     }
 
     private fun addStars(){
         if(stars in 0..4){
-            val star: ImageView = binding.layoutStar.getChildAt(stars) as ImageView
+            val star: ImageView = requireActivity().findViewById(R.id.sddsdssds)
             star.setColorFilter(Color.YELLOW)
             stars++
         }
@@ -82,9 +85,9 @@ class Successful : Fragment() {
 
     private fun removeStars(){
         if(stars in 1..5){
+            val star: ImageView = requireActivity().findViewById(R.id.cardView)
+            star.setColorFilter(Color.YELLOW)
             stars--
-            val star: ImageView = binding.layoutStar.getChildAt(stars) as ImageView
-            star.setColorFilter(ContextCompat.getColor(requireContext(),R.color.text_gray_color))
         }
     }
 

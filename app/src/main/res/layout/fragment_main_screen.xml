@@ -96,17 +96,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView23"
-        style="@style/MainText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="40dp"
-        android:text="Special for you"
-        android:textColor="@color/orange"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView23"
+            style="@style/MainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Special for you"
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/orange"
+            app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/appCompatImageButton2"
@@ -119,219 +119,224 @@
         app:layout_constraintTop_toTopOf="@+id/appCompatTextView23" />
 
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView23">
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView23">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="22dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="166dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/reklama1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="166dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/reklama2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="166dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/reklama3" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="166dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/reklama4" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/what"
+            style="@style/MainText"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="What would you like to do"
+            android:textColor="@color/primary_blue"
+            app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/what">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/appCompatImageButtonss"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:cardBackgroundColor="#F2F2F2"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/healthicons_call_centre" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/blue_H1Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Customer Care" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/smallMainBtnText"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/appCompatImageButtons"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="23dp"
+                app:cardBackgroundColor="#F2F2F2"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/box" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/blue_H1Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Send a package" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/smallMainBtnText"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Request for a driver to pick up or deliver your package for you" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="22dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat10"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat10">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="166dp"
-                android:layout_height="64dp"
-                android:layout_marginRight="13dp"
-                android:background="@drawable/reklama1" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/apap"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:cardBackgroundColor="#F2F2F2"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="166dp"
-                android:layout_height="64dp"
-                android:layout_marginRight="13dp"
-                android:background="@drawable/reklama2" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/wallet" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="166dp"
-                android:layout_height="64dp"
-                android:layout_marginRight="13dp"
-                android:background="@drawable/reklama3" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/blue_H1Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Fund your wallet" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="166dp"
-                android:layout_height="64dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/reklama4" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/smallMainBtnText"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_chat"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="24dp"
+                app:cardBackgroundColor="@color/primary_blue"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/chatsss" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/blue_H1Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Chats"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/smallMainBtnText"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Search for available rider within your area"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
         </androidx.appcompat.widget.LinearLayoutCompat>
-    </HorizontalScrollView>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/what"
-        style="@style/MainText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="25dp"
-        android:text="What would you like to do"
-        android:textColor="@color/primary_blue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/what">
-
-<!--        <androidx.appcompat.widget.AppCompatImageButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/ccare"/>-->
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/appCompatImageButtonss"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            app:cardBackgroundColor="#F2F2F2"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/healthicons_call_centre"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                style="@style/blue_H1Address"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:text="Customer Care"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="127dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="8dp"
-                style="@style/smallMainBtnText"
-                android:text="Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/appCompatImageButtons"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            app:cardBackgroundColor="#F2F2F2"
-            app:cardCornerRadius="8dp"
-            android:layout_marginLeft="23dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/box"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                style="@style/blue_H1Address"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:text="Send a package"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="127dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="8dp"
-                style="@style/smallMainBtnText"
-                android:text="Request for a driver to pick up or deliver your package for you"/>
-        </androidx.cardview.widget.CardView>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="23dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat10">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/apap"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            app:cardBackgroundColor="#F2F2F2"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/wallet"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                style="@style/blue_H1Address"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:text="Fund your wallet"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="127dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="8dp"
-                style="@style/smallMainBtnText"
-                android:text="To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_chat"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginLeft="24dp"
-            app:cardBackgroundColor="@color/primary_blue"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/chatsss"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                style="@style/blue_H1Address"
-                android:textColor="@color/white"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:text="Chats"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="127dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:textColor="@color/white"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="8dp"
-                style="@style/smallMainBtnText"
-                android:text="Search for available rider within your area"/>
-        </androidx.cardview.widget.CardView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

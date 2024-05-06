@@ -4,9 +4,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import java.util.Queue
 
 class ViewPagerAdapter(
-    list: java.util.ArrayList<Fragment>,
+    list: Queue<Fragment>,
     fm: FragmentManager,
     lifecycle: Lifecycle): FragmentStateAdapter(fm,lifecycle) {
 
